@@ -18,9 +18,12 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+
+      - name: Install SDK Packages
         run: |
-          echo "ANDROID_HOME=$ANDROID_HOME"
-          yes | sdkmanager --licenses
           sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
       - name: Setup Gradle
