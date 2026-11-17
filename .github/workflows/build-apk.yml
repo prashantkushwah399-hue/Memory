@@ -32,7 +32,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Extract Project
-        run: unzip -q MemoirAI-Fixed.zip
+        run: unzip -q MemoirAI.zip
 
       - name: Build APK
         working-directory: MemoirAI
